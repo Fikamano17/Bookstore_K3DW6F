@@ -1,7 +1,7 @@
 package bookstore;
-import ProductType;
+import bookstore.ProductType;
 
-public class Product {
+public class Product{
     private int id;
     private int price;
     private ProductType type;
@@ -71,14 +71,6 @@ public class Product {
     }
 
 
-    public boolean comparePrice(Product other){
-        return this.price > other.getPrice(); 
-    }
-
-    
-    
-
-
     @Override
     public String toString() {
         return "{" +
@@ -86,6 +78,7 @@ public class Product {
             ", price='" + getPrice() + "'" +
             ", type='" + getType() + "'" +
             ", name='" + getName() + "'" +
+            ", popularity='" + getPopularity() + "'" +
             "}";
     }
     
