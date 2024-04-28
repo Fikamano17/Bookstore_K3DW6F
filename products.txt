@@ -1,0 +1,60 @@
+1,10,BOOK,Harry Potter,95
+2,5,NOTEBOOK,Plain Notebook,70
+3,2,PEN,Blue Pen,80
+4,3,BOOKMARK,Cute Bookmark,60
+5,15,AUDIOBOOK,The Great Gatsby,85
+6,4,KEYCHAIN,Fluffy Keychain,75
+7,12,BOOK,To Kill a Mockingbird,90
+8,7,NOTEBOOK,Dotted Journal,65
+9,2,PEN,Black Pen,75
+10,4,BOOKMARK,Quote Bookmark,55
+11,20,AUDIOBOOK,Pride and Prejudice,90
+12,3,KEYCHAIN,Heart Keychain,70
+13,8,BOOK,1984,85
+14,6,NOTEBOOK,Sketchbook,60
+15,3,PEN,Red Pen,70
+16,2,BOOKMARK,Colorful Bookmark,50
+17,25,AUDIOBOOK,The Catcher in the Rye,95
+18,5,KEYCHAIN,Initial Keychain,80
+19,15,BOOK,The Hobbit,90
+20,4,NOTEBOOK,Graph Paper Notebook,55
+21,2,PEN,Green Pen,75
+22,3,BOOKMARK,Leather Bookmark,65
+23,30,AUDIOBOOK,The Lord of the Rings,95
+24,6,KEYCHAIN,Animal Keychain,70
+25,18,BOOK,The Da Vinci Code,85
+26,8,NOTEBOOK,Travel Journal,60
+27,4,PEN,Purple Pen,70
+28,5,BOOKMARK,Magnetic Bookmark,60
+29,35,AUDIOBOOK,Game of Thrones,95
+30,10,KEYCHAIN,Novelty Keychain,75
+31,20,BOOK,Brave New World,90
+32,9,NOTEBOOK,Refillable Notebook,65
+33,3,PEN,Yellow Pen,75
+34,6,BOOKMARK,Wooden Bookmark,55
+35,40,AUDIOBOOK,The Hunger Games,95
+36,12,KEYCHAIN,Funny Keychain,80
+37,22,BOOK,Fahrenheit 451,85
+38,7,NOTEBOOK,Grid Notebook,60
+39,4,PEN,Orange Pen,70
+40,8,BOOKMARK,Photo Bookmark,60
+41,45,AUDIOBOOK,The Girl with the Dragon Tattoo,95
+42,15,KEYCHAIN,Disney Keychain,75
+43,25,BOOK,The Alchemist,90
+44,10,NOTEBOOK,Journal Notebook,65
+45,5,PEN,White Pen,75
+46,10,BOOKMARK,Personalized Bookmark,55
+47,50,AUDIOBOOK,The Shining,95
+48,20,KEYCHAIN,Engraved Keychain,80
+49,30,BOOK,The Great Gatsby,85
+50,12,NOTEBOOK,Bullet Journal,60
+51,6,PEN,Brown Pen,70
+52,12,BOOKMARK,Feather Bookmark,60
+53,55,AUDIOBOOK,To Kill a Mockingbird,95
+54,25,KEYCHAIN,Metal Keychain,75
+55,35,BOOK,Animal Farm,90
+56,15,NOTEBOOK,A5 Notebook,65
+57,8,PEN,Pink Pen,75
+58,14,BOOKMARK,Floral Bookmark,55
+59,60,AUDIOBOOK,1984,95
+60,18,KEYCHAIN,Gadget Keychain,80

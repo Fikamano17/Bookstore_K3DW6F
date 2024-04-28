@@ -1,37 +1,47 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 import bookstore.*;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public static void main(String[] args){
+        String filePath="products.txt";
+        try{
+            FileReader fileReader=new FileReader(filePath);
+            BufferedReader bufferedReader= new BufferedReader(fileReader);
+            String line;
+            while ((line=bufferedReader.readLine())!=null) {
 
-        Product asd= new Product(0, null);
-        System.out.println(asd.getId());
-        Bookstore fgh=new Bookstore("bokok", "1","some","0123", "258");
-        System.out.println(fgh.getName());
+                String[] fields=line.split(",");
+                int price=Integer.parseInt(fields[1]);
+                if (price<0) {
+                    throw new NegativePriceException();
+                                
+                }
 
-        List<Product> top3 = new ArrayList<Product>();
-        top3.add(new Product(0, 1500, ProductType.BOOK, "ize", 600));
-        top3.add(new Product(1, 20, ProductType.BOOK, "Java Programming", 500));
-        top3.add(new Product(2, 15, ProductType.NOTEBOOK, "Spiral Notebook", 300));
-        top3.add(new Product(3, 5, ProductType.PEN, "Ballpoint Pen", 700));
-        top3.add(new Product(4, 3, ProductType.BOOKMARK, "Bookmark Set", 200));
-        top3.add(new Product(5, 30, ProductType.AUDIOBOOK, "The Great Gatsby Audiobook", 800));
-        top3.add(new Product(6, 8, ProductType.KEYCHAIN, "Keychain with LED Light", 400));
-        top3.add(new Product(7, 10, ProductType.BOOK, "Harry Potter and the Philosopher's Stone", 900));
-        top3.add(new Product(8, 25, ProductType.NOTEBOOK, "Leather Journal", 600));
-        top3.add(new Product(9, 2, ProductType.PEN, "Gel Pen Set", 1000));
-        top3.add(new Product(10, 6, ProductType.BOOKMARK, "Metal Bookmark", 250));
-        top3.add(new Product(11, 18, ProductType.AUDIOBOOK, "The Hitchhiker's Guide to the Galaxy", 720));
+                int id = Integer.parseInt(fields[0]);
 
-        Collections.sort(top3, new PopularityComparator());
+                ProductType type = ProductType.valueOf(fields[2]);
 
-        for(Product product: top3){
-            
-            System.out.println(product.toString());
+                String name = fields[3];
+
+                int popularity = Integer.parseInt(fields[4]);
+                
+            }
+            bufferedReader.close();
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(NegativePriceException e){
+            e.printStackTrace();
+        }catch(IllegalArgumentException e){
+            e.printStackTrace();
+        }catch(Exception e){
+            e.printStackTrace();
         }
 
-
-
+        
+    
     }
 }

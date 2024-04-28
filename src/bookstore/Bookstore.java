@@ -11,36 +11,70 @@ public class Bookstore extends Store{
 	private String street_number;
 	private String zip_code;
     private Product[] products;
+    private static double tax=0.27;
+    private final String country;
 
-    public Bookstore(Product[] products, String name, String street, String city, String zip_code, String street_number){
+    public Bookstore(Product[] products, String name, String street, String city, String zip_code, String street_number,String country){
         this.products = products;
         this.name = name;
         this.street_number = street_number;
         this.street = street;
         this.city= city;
         this.zip_code = zip_code;
+        this.country = country;
     }
 
-    public Bookstore(String name, String street, String city, String zip_code, String street_number){
+    public Bookstore(String name, String street, String city, String zip_code, String street_number,String country){
         this.name = name;
         this.street_number = street_number;
         this.street = street;
         this.city= city;
         this.zip_code = zip_code;
+        this.country = country;
     }
 
-    public String[] advertisements(){
-        List<Product> top3 =  new ArrayList<Product>();
-        for (Product product : top3) {
-            
+    @SuppressWarnings("unchecked")
+    public void advertisements(){
+        List<Product> rankedList =  Arrays.asList(this.products);
+        Collections.sort(rankedList, new PopularityComparator());
+        
+        for(int i=0; i<3; i++){
+            System.out.println(rankedList.get(i).toString());
         }
-
         }
     
 
     public void listProducts(){
         System.out.println("mukodj");
 
+    }
+
+    public double calculateProfit(){
+        double sum=0;
+        for(Product i :this.products){
+            sum+=i.getPrice()*i.getPopularity()*(1-tax);
+        }
+        return sum;
+    }
+
+    public boolean isThere(String name){
+        for(Product i : this.products){
+            if(i.getName()==name){
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    public List<Product> priceRange(int min, int max){
+        List<Product> items=new ArrayList<Product>();
+        for(Product i: this.products){
+            if(i.getPrice()>=min&&i.getPrice()<=max){
+                items.add(i);
+            }
+        }
+        return items;
     }
 
    // ----------------------------------------------------------
@@ -93,7 +127,9 @@ public class Bookstore extends Store{
         this.products = products;
     }
     
-
+    public String getCountry(){
+        return this.country;
+    }
 
     
     

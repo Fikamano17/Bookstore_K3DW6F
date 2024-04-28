@@ -1,5 +1,6 @@
 package bookstore;
 import bookstore.ProductType;
+import bookstore.NegativePriceException;
 
 public class Product{
     private int id;
@@ -43,7 +44,16 @@ public class Product{
     }
 
     public void setPrice(int price) {
+        try{
+        if(price<0){
+            throw new NegativePriceException();
+        }
         this.price = price;
+        }
+        catch(NegativePriceException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 
     public ProductType getType() {
