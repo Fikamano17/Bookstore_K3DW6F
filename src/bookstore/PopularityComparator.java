@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class PopularityComparator implements Comparator {
 
-    @Override
+    @Override //metódus felüldefiniálás
     public int compare(Object one, Object two){
         Product p1=(Product)one; 
         Product p2=(Product)two;

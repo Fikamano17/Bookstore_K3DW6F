@@ -4,15 +4,15 @@ import bookstore.Store;
 import java.util.*;
 
 
-public class Bookstore extends Store{
-    private String name;
+public class Bookstore extends Store{ //öröklődés
+    private String name; // adattagok
 	private String city;
 	private String street;
 	private String street_number;
 	private String zip_code;
-    private Product[] products;
-    private static double tax=0.27;
-    private final String country;
+    private Product[] products; //tömb
+    public static double tax=0.27; //osztályszintű adattag
+    private final String country; // konstans 
 
     public Bookstore(Product[] products, String name, String street, String city, String zip_code, String street_number,String country){
         this.products = products;
@@ -37,15 +37,23 @@ public class Bookstore extends Store{
     public void advertisements(){
         List<Product> rankedList =  Arrays.asList(this.products);
         Collections.sort(rankedList, new PopularityComparator());
+        System.out.println("A "+ this.name+ " legnépszerűbb termékei: ");
         
         for(int i=0; i<3; i++){
-            System.out.println(rankedList.get(i).toString());
+            Product product=rankedList.get(i);
+            System.out.println(product.getName()+" "+product.getPrice()+" pénz");
         }
         }
+
+        
     
 
     public void listProducts(){
-        System.out.println("mukodj");
+        System.out.println("Termékek a " + this.name + "üzletben:\n");
+        for (Product product : products) {
+            System.out.println(product);
+            
+        }
 
     }
 

@@ -3,12 +3,13 @@ import bookstore.ProductType;
 import bookstore.NegativePriceException;
 
 public class Product{
-    private int id;
+    private int id; //adattagok
     private int price;
     private ProductType type;
     private String name;
     private int popularity;
 
+    // konstruktorok
     public Product(int id, int price, ProductType type, String name){
         this.id = id;
         this.price = price;
@@ -81,7 +82,7 @@ public class Product{
     }
 
 
-    @Override
+    @Override //metódus felüldefiniálás
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
