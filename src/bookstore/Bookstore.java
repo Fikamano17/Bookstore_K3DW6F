@@ -11,7 +11,7 @@ public class Bookstore extends Store{ //öröklődés
 	private String street_number;
 	private String zip_code;
     private Product[] products; //tömb
-    public static double tax=0.27; //osztályszintű adattag
+    private static double tax=0.27; //osztályszintű adattag
     private final String country; // konstans 
 
     public Bookstore(Product[] products, String name, String street, String city, String zip_code, String street_number,String country){
@@ -138,6 +138,15 @@ public class Bookstore extends Store{ //öröklődés
     public String getCountry(){
         return this.country;
     }
+
+    public static void setTax(double tax1){
+        tax=tax1;
+    }
+
+    public static double getTax(){
+        return tax;
+    }
+
 
     
     

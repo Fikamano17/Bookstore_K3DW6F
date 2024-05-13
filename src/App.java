@@ -15,14 +15,14 @@ public class App {
         stores[2] = new Bookstore(getRandomProducts(30, products), "Books R Us", "Elm St", "Los Angeles", "90001", "456", "USA");
         stores[3] = new Bookstore(getRandomProducts(40, products), "Book Nook", "Oak St", "Chicago", "60601", "789", "USA");
         stores[4]= new Bookstore(getRandomProducts(50, products), "Bookworm", "Petőfi St", "Miskolc", "3530", "61", "Hungary");
-        Bookstore.tax=0;
+        Bookstore.setTax(0);
         System.out.println("Bevétel adók nélkül:");
         for (Bookstore bookstore : stores) {
             System.out.println(bookstore.getName()+" bevétele: " + Math.round(bookstore.calculateProfit())+" pénz");
             
         }
 
-        Bookstore.tax=0.27;
+        Bookstore.setTax(0.27);
         System.out.println("Bevétel 27% adóval:");
         for (Bookstore bookstore : stores) {
             System.out.println(bookstore.getName()+" bevétele: "+ Math.round(bookstore.calculateProfit())+" pénz");
